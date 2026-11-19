@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="SM Engineers emblem">
+  <circle cx="32" cy="32" r="31" fill="#13315c"/>
+  <circle cx="32" cy="32" r="27" fill="none" stroke="#ff9933" stroke-width="2"/>
+  <g fill="#ffffff" transform="translate(32 32)">
+    <g id="t"><rect x="-3" y="-21" width="6" height="7" rx="1"/></g>
+    <use href="#t" transform="rotate(45)"/><use href="#t" transform="rotate(90)"/><use href="#t" transform="rotate(135)"/>
+    <use href="#t" transform="rotate(180)"/><use href="#t" transform="rotate(225)"/><use href="#t" transform="rotate(270)"/><use href="#t" transform="rotate(315)"/>
+    <circle r="15"/>
+  </g>
+  <circle cx="32" cy="32" r="9" fill="#13315c"/>
+  <path d="M25 33h4l2-5 3 9 2-4h3" fill="none" stroke="#ff9933" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="32" y="58.5" text-anchor="middle" font-family="Segoe UI, Arial, sans-serif" font-size="6.5" font-weight="700" fill="#ffffff">SM</text>
+</svg>
