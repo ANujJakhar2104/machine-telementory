@@ -64,7 +64,7 @@ function createApp() {
   // chart.js's "exports" map hides dist/chart.umd.js, so locate it next to the package's CommonJS entry.
   const chartUmd = path.join(path.dirname(require.resolve('chart.js')), 'chart.umd.js');
   app.get('/vendor/chart.umd.js', (_req, res) => res.sendFile(chartUmd, { maxAge: '7d' }));
-  app.use(express.static(path.join(__dirname, '..', 'public'), { maxAge: config.isProd ? '1h' : 0, index: 'index.html' }));
+  app.use(express.static(path.join(__dirname, '..', 'public'), { maxAge: 0, index: 'index.html' }));
 
   // Central error handler: consistent JSON shape, no stack traces leaked to clients.
   // eslint-disable-next-line no-unused-vars
