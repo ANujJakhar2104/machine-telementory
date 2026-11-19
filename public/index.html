@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Machine Telemetry & Predictive Maintenance Portal | SM Engineers</title>
+  <meta name="description" content="SM Engineers portal for live CNC machine telemetry, early-warning alerts, health scores and maintenance tickets.">
+  <link rel="icon" href="/img/emblem.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to main content</a>
+
+  <div class="topbar" role="region" aria-label="Accessibility options">
+    <div class="container">
+      <div><span data-i18n="org">SM Engineers</span> <span class="sep">|</span> <span data-i18n="digital">Digital Initiative</span></div>
+      <div class="tb-right">
+        <a href="#main" data-i18n="skipShort">Skip to Main Content</a>
+        <span class="sep">|</span>
+        <a href="#/help" data-i18n="screenReader">Screen Reader Access</a>
+        <span class="sep">|</span>
+        <span role="group" aria-label="Text size">
+          <button type="button" class="a11y-btn" data-fs="sm" aria-label="Decrease text size">A-</button>
+          <button type="button" class="a11y-btn" data-fs="md" aria-label="Normal text size">A</button>
+          <button type="button" class="a11y-btn" data-fs="lg" aria-label="Increase text size">A+</button>
+        </span>
+        <button type="button" class="a11y-btn" id="contrastBtn" aria-pressed="false" aria-label="Toggle high contrast">◐</button>
+        <label class="sr-only" for="langSelect">Language</label>
+        <select id="langSelect" class="lang-select">
+          <option value="en">English</option>
+          <option value="hi">हिन्दी</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="#/" aria-label="Home">
+        <img src="/img/emblem.svg" alt="" width="64" height="64">
+        <div>
+          <div class="b-hi" data-i18n="titleAlt">मशीन टेलीमेट्री एवं पूर्वानुमानित रखरखाव पोर्टल</div>
+          <div class="b-title" data-i18n="title">Machine Telemetry &amp; Predictive Maintenance Portal</div>
+          <div class="b-sub" data-i18n="subtitle">SM Engineers · Precision Manufacturing · Digital Initiative</div>
+        </div>
+      </a>
+      <div class="header-right" id="headerRight"></div>
+    </div>
+  </header>
+  <div class="tricolour" aria-hidden="true"></div>
+
+  <nav class="main-nav" aria-label="Main">
+    <div class="container">
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navList">☰ <span data-i18n="menu">Menu</span></button>
+      <ul class="nav-list" id="navList">
+        <li><a href="#/" data-nav="/" data-i18n="home">Home</a></li>
+        <li><a href="#/about" data-nav="/about" data-i18n="about">About Us</a></li>
+        <li>
+          <button class="dd" aria-haspopup="true" aria-expanded="false" data-i18n="project">The Project ▾</button>
+          <ul class="sub">
+            <li><a href="#/project" data-i18n="overview">Overview</a></li>
+            <li><a href="#/architecture" data-i18n="architecture">System Architecture</a></li>
+            <li><a href="#/technology" data-i18n="technology">Technology Stack</a></li>
+            <li><a href="#/access" data-i18n="access">Roles &amp; Access Control</a></li>
+            <li><a href="/api-docs" target="_blank" rel="noopener" data-i18n="apiDocs">API Documentation ↗</a></li>
+          </ul>
+        </li>
+        <li><a href="#/sitemap" data-nav="/sitemap" data-i18n="sitemap">Sitemap</a></li>
+        <li><a href="#/help" data-nav="/help" data-i18n="help">Help</a></li>
+        <li><a href="#/feedback" data-nav="/feedback" data-i18n="feedback">Feedback</a></li>
+      </ul>
+      <div class="nav-cta" id="navCta"></div>
+    </div>
+  </nav>
+
+  <div class="ticker" id="ticker" role="region" aria-label="What's new">
+    <div class="container">
+      <span class="ticker-label" data-i18n="whatsNew">What's New</span>
+      <div class="ticker-track"><div class="ticker-inner" id="tickerInner"></div></div>
+      <button type="button" class="ticker-pause" id="tickerPause" aria-pressed="false">❚❚ <span class="sr-only">Pause ticker</span></button>
+    </div>
+  </div>
+
+  <main id="main" tabindex="-1"></main>
+
+  <footer class="site-footer">
+    <div class="f-links">
+      <div class="container">
+        <a href="#/policies" data-i18n="policies">Website Policies</a>
+        <a href="#/policies#privacy" data-i18n="privacy">Privacy Policy</a>
+        <a href="#/policies#terms" data-i18n="terms">Terms &amp; Conditions</a>
+        <a href="#/help" data-i18n="help">Help</a>
+        <a href="#/sitemap" data-i18n="sitemap">Sitemap</a>
+        <a href="#/feedback" data-i18n="contact">Contact / Feedback</a>
+      </div>
+    </div>
+    <div class="f-main">
+      <div class="container">
+        <div>
+          <h4 data-i18n="aboutPortal">About this Portal</h4>
+          <p class="small">The Machine Telemetry &amp; Predictive Maintenance Portal collects live sensor readings from CNC and VMC machines, warns the team before a breakdown and turns every serious alert into a tracked maintenance ticket.</p>
+          <p class="small">Developed under the Digital Initiative of SM Engineers as an internship project with the Department of Computer Science and Engineering, IIIT Nagpur.</p>
+        </div>
+        <div>
+          <h4 data-i18n="quickLinks">Quick Links</h4>
+          <ul>
+            <li><a href="#/project">Project Overview</a></li>
+            <li><a href="#/architecture">System Architecture</a></li>
+            <li><a href="#/access">Roles &amp; Access Control</a></li>
+            <li><a href="/api-docs" target="_blank" rel="noopener">API Documentation</a></li>
+            <li><a href="#/login">Staff Login</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 data-i18n="contactUs">Contact</h4>
+          <ul class="small">
+            <li>Digital Initiative Team, SM Engineers</li>
+            <li>Project by Puneet Kumar (BT23CSH006)</li>
+            <li>Faculty Mentor: Dr. Nishat Ansari</li>
+            <li>Technical Head: Mr. Rajesh Kumar</li>
+            <li><a href="#/feedback">Send feedback or a grievance →</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <div class="container">
+        <span>© <span id="year"></span> SM Engineers. Content owned and maintained by the Digital Initiative Team.</span>
+        <span>Last updated: <span id="lastUpdated"></span> · Visitors: <span class="visitor" id="visitors">—</span></span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toasts" id="toasts" aria-live="polite"></div>
+  <dialog id="modal" aria-labelledby="modalTitle">
+    <div class="d-head"><h3 id="modalTitle"></h3><button type="button" data-close aria-label="Close">×</button></div>
+    <div class="d-body" id="modalBody"></div>
+    <div class="d-foot" id="modalFoot"></div>
+  </dialog>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/vendor/chart.umd.js"></script>
+  <script type="module" src="/js/app.js"></script>
+</body>
+</html>
