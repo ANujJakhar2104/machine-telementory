@@ -301,7 +301,6 @@ dialog .d-body { padding: 18px; }
 dialog .d-foot { padding: 12px 18px; background: var(--surface-2); display: flex; justify-content: flex-end; gap: 8px; border-top: 1px solid var(--border); }
 
 .login-wrap { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: start; }
-.demo-creds td, .demo-creds th { font-size: .82rem; padding: 6px 8px; }
 .loader { display: inline-block; width: 18px; height: 18px; border: 3px solid #cfd8e6; border-top-color: var(--navy); border-radius: 50%; animation: spin .8s linear infinite; vertical-align: middle; }
 @keyframes spin { to { transform: rotate(360deg); } }
 

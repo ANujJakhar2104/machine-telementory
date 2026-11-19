@@ -317,12 +317,6 @@ export async function login(main, { query }) {
     </form>
     <div>
       <div class="card"><h3>Instructions</h3><ul class="ticks small"><li>Accounts are role-based: <b>Admin</b>, <b>Engineer</b> or <b>Viewer</b>.</li><li>After 10 failed attempts, login is blocked for 15 minutes.</li><li>Forgot password? Contact the portal Administrator.</li></ul></div>
-      <div class="card tinted" id="demoBox" style="margin-top:16px" hidden><h3>Demonstration accounts</h3><p class="small muted">Click a row to fill the form.</p>
-        <div class="table-wrap"><table class="demo-creds"><thead><tr><th>Role</th><th>Email</th><th>Password</th></tr></thead><tbody>
-          <tr data-e="admin@smengineers.demo" data-p="Admin@123" tabindex="0"><td><span class="badge role-ADMIN">ADMIN</span></td><td>admin@smengineers.demo</td><td class="mono">Admin@123</td></tr>
-          <tr data-e="engineer@smengineers.demo" data-p="Engineer@123" tabindex="0"><td><span class="badge role-ENGINEER">ENGINEER</span></td><td>engineer@smengineers.demo</td><td class="mono">Engineer@123</td></tr>
-          <tr data-e="viewer@smengineers.demo" data-p="Viewer@123" tabindex="0"><td><span class="badge role-VIEWER">VIEWER</span></td><td>viewer@smengineers.demo</td><td class="mono">Viewer@123</td></tr>
-        </tbody></table></div></div>
     </div></div></section>`;
 
   let captchaId = null;
@@ -340,11 +334,6 @@ export async function login(main, { query }) {
     const p = $('#lgPass'); const show = p.type === 'password';
     p.type = show ? 'text' : 'password'; e.target.textContent = show ? 'Hide' : 'Show'; e.target.setAttribute('aria-pressed', String(show));
   };
-  api('/public/stats').then(({ data }) => { $('#demoBox').hidden = !data.demo; }).catch(() => {});
-  $$('#demoBox tr[data-e]').forEach((tr) => {
-    const fill = () => { $('#lgEmail').value = tr.dataset.e; $('#lgPass').value = tr.dataset.p; $('#lgCaptcha').focus(); };
-    tr.style.cursor = 'pointer'; tr.onclick = fill; tr.onkeydown = (e) => { if (e.key === 'Enter') fill(); };
-  });
   $('#loginForm').onsubmit = async (e) => {
     e.preventDefault();
     const body = { ...Object.fromEntries(new FormData(e.target)), captchaId };
