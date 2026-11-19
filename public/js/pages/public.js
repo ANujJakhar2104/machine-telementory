@@ -276,7 +276,7 @@ export async function policies(main) {
 
 // ---------------- Feedback ----------------
 export async function feedback(main) {
-  main.innerHTML = pageHead('Feedback / Grievance') + sec('Share your feedback', `<div class="grid g2">
+  main.innerHTML = pageHead('Feedback / Grievance') + sec('Share your feedback', `
     <form class="card" id="fbForm" novalidate>
       <div class="form-grid">
         <div class="field"><label for="fbName">Full name <span class="req">*</span></label><input id="fbName" name="name" required maxlength="80" autocomplete="name"></div>
@@ -286,11 +286,7 @@ export async function feedback(main) {
       <div class="field" style="margin-top:14px"><label for="fbMsg">Message <span class="req">*</span></label><textarea id="fbMsg" name="message" required minlength="10" maxlength="2000"></textarea><small>10–2000 characters</small></div>
       <div id="fbStatus" style="margin-top:12px"></div>
       <div class="btn-row" style="margin-top:14px"><button class="btn btn-primary" type="submit">Submit</button><button class="btn btn-light" type="reset">Reset</button></div>
-    </form>
-    <div class="card tinted"><h3>Contact information</h3>
-      <dl class="kv"><dt>Team</dt><dd>Digital Initiative, SM Engineers</dd><dt>Project</dt><dd>Machine Telemetry &amp; Predictive Maintenance</dd><dt>Developer</dt><dd>Puneet Kumar (BT23CSH006)</dd></dl>
-      <p class="small muted" style="margin-top:12px">Every submission gets a reference number. Grievances are reviewed by the portal Administrator.</p></div>
-  </div>`);
+    </form>`);
   $('#fbForm').onsubmit = async (e) => {
     e.preventDefault();
     const f = e.target;
