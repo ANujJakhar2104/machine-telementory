@@ -106,22 +106,7 @@ export async function about(main) {
   ];
   main.innerHTML = pageHead('About Us') + sec('SM Engineers', `
     <p class="muted">SM Engineers is a precision engineering company serving automotive, infrastructure and OEM customers. Its Digital Initiative builds software for the shop floor.</p>
-    <div class="grid g3">${units.map(([i, h, p], k) => `<div class="card${k === 5 ? ' tinted' : ''}"><h3><span aria-hidden="true">${i}</span>${h}</h3><p class="small muted">${p}</p></div>`).join('')}</div>`)
-  + sec('Project Credits', `<div class="grid g2">
-    <div class="card"><dl class="kv">
-      <dt>Project</dt><dd>Machine Telemetry &amp; Predictive Maintenance Platform</dd>
-      <dt>Developed by</dt><dd>Puneet Kumar (BT23CSH006)</dd>
-      <dt>Designation</dt><dd>Backend Engineer Intern</dd>
-      <dt>Organisation</dt><dd>SM Engineers — Digital Initiative</dd>
-      <dt>Duration</dt><dd>10 July 2026 – 10 January 2027</dd>
-    </dl></div>
-    <div class="card"><dl class="kv">
-      <dt>Institute</dt><dd>Indian Institute of Information Technology, Nagpur</dd>
-      <dt>Department</dt><dd>Computer Science and Engineering</dd>
-      <dt>Faculty Mentor</dt><dd>Dr. Nishat Ansari</dd>
-      <dt>Industry Guide</dt><dd>Mr. Rajesh Kumar, Technical Head</dd>
-      <dt>Process</dt><dd>Code review before every merge</dd>
-    </dl></div></div>`);
+    <div class="grid g3">${units.map(([i, h, p], k) => `<div class="card${k === 5 ? ' tinted' : ''}"><h3><span aria-hidden="true">${i}</span>${h}</h3><p class="small muted">${p}</p></div>`).join('')}</div>`);
 }
 
 // ---------------- Project overview ----------------
